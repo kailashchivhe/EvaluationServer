@@ -1,7 +1,7 @@
 {
-  "name": "EvaluationServer",
+  "name": "evaluationserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Evaluation Server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,16 +10,24 @@
     "type": "git",
     "url": "git+https://github.com/kailashchivhe/EvaluationServer.git"
   },
-  "author": "",
+  "author": "Kailash Chivhe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kailashchivhe/EvaluationServer/issues"
   },
   "homepage": "https://github.com/kailashchivhe/EvaluationServer#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.7.2"
+    "express-jwt": "^7.7.7",
+    "express-jwt-authz": "^2.4.1",
+    "jwks-rsa": "^3.0.0",
+    "mongoose": "^6.8.0",
+    "mongodb": "^4.10.0",
+    "https": "^1.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "jsonwebtoken": "^8.5.1"
   }
 }

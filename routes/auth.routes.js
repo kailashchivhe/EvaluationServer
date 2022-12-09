@@ -8,4 +8,5 @@ module.exports = function(app) {
         );
         next();
     });
+    app.get("/validate", controller.checkJwt, controller.validate);
 };

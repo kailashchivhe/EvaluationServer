@@ -5,3 +5,5 @@ const db = {};
 
 db.mongoose = mongoose;
 
+module.exports = db;
+
