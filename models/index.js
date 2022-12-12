@@ -5,5 +5,9 @@ const db = {};
 
 db.mongoose = mongoose;
 
-module.exports = db;
+db.team = require("./team.model");
+db.examier = require("./examier.model");
+db.admin = require("./admin.model");
+db.scoreBoard = require("./scoreBoard.model");
 
+module.exports = db;
