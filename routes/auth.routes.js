@@ -9,4 +9,13 @@ module.exports = function(app) {
         next();
     });
     app.get("/validate", controller.checkJwt, controller.validate);
+    app.get("/allTeams", controller.getTeams);
+    app.get("/allExamier", controller.getExamiers);
+    app.get("/getScore", controller.getScores);
+    app.get("/logout", controller.logout);
+    app.post("/addScore", controller.addScore);
+    app.post("/addTeam", controller.addTeam);
+    app.post("/addExamier", controller.addExamier);
+    app.post("/login", controller.login);
+    app.post("/signup", controller.signup);
 };

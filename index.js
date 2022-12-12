@@ -1,13 +1,17 @@
 const expressModule = require('express');
 const app = expressModule();
 const cookieParser = require('cookie-parser');
+var cors = require('cors');
 
 const PORT = process.env.PORT || 3000;
+
+
 
 app.use(expressModule.json());
 app.use(expressModule.urlencoded({ extended: true }));
 app.use(expressModule.text());
 app.use(cookieParser());
+app.use(cors())
 
 const db = require("./models")
 const dbConfig = require("./config/db.config");
