@@ -11,7 +11,7 @@ app.use(expressModule.json());
 app.use(expressModule.urlencoded({ extended: true }));
 app.use(expressModule.text());
 app.use(cookieParser());
-app.use(cors())
+app.use(cors({credentials: true, origin: '*'}));
 
 const db = require("./models")
 const dbConfig = require("./config/db.config");
@@ -29,3 +29,11 @@ try {
 }
 
 require('./routes/auth.routes')(app);
+
+app.get('/login', function(req, res){
+    res.sendFile(path.join(__dirname+'/login/login.html'));
+  });
+  
+  app.get('/home', function(req, res){
+    res.sendFile(path.join(__dirname+'/home/home.html'));
+  });
