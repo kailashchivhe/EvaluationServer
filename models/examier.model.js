@@ -17,9 +17,6 @@ const Examier = new Schema({
     company: {
         type: String
     },
-    gender:{
-        type: String
-    },
 });
 
 module.exports = mongoose.model('Examier', Examier);

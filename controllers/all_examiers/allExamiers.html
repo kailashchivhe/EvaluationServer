@@ -58,7 +58,7 @@
       }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="allExamiers.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
     <!-- Custom styles for this template -->
     <link href="allExamiers.css" rel="stylesheet">
     <!-- <script src="allExamiers.js"></script> -->
@@ -77,9 +77,9 @@
                   var count = 1;
                   response.data.examier.forEach(examer => {
                       var url = new URL("https://api.qrserver.com/v1/create-qr-code/?size=150x150");
-                      url.searchParams.append('data', examer.email + ',' + examer.password);
+                      url.searchParams.append('data', examer.email + ',' + examer.password + ',' + examer.firstName + ' ' + examer.lastName);
                       list.innerHTML += '<tr><td>'+ count+ '</td><td>'+ examer.firstName + ' ' + examer.lastName + '</td><td>' 
-                          + examer.email + ' </td> <td>' + examer.company + '</td><td>' + examer.gender + '</td>'
+                          + examer.email + ' </td> <td>' + examer.company + '</td>'
                           + '<td class=p-3> <img src='+ url.toString() + ' height=150 width=150></img> </td> </tr>';
                       count++;
                   });
@@ -104,7 +104,6 @@
                   <th scope="col">Name</th>
                   <th scope="col">Email</th>
                   <th scope="col">Company</th>
-                  <th scope="col">Gender</th>
                   <th scope="col">QR code</th>
                 </tr>
               </thead>

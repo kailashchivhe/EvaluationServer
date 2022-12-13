@@ -82,6 +82,7 @@
       .then(function (response) {
           if (response && response.data) {
             console.log(response.data.message);
+            location.replace("http://localhost:3000/home");
             //Flash - Team added
           }
       })
@@ -103,7 +104,7 @@
         <div class="row g-5">
           <div class="col-md-7 col-lg-8">
             <h4 class="mb-3">Team Details </h4>
-            <form class="needs-validation" action="http:localhost:3000/home">
+            <form class="needs-validation">
               <div class="row g-3">
                 <div class="col-sm-12">
                   <label for="teamName" class="form-label">Team name</label>
@@ -138,8 +139,8 @@
                 </div>
               </div>
 
-              <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="addTeam();">Add Team</button>
             </form>
+            <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="addTeam();">Add Team</button>
           </div>
         </div>
       </main>

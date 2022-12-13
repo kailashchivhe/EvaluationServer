@@ -68,7 +68,6 @@ exports.addExamier = (req, res) => {
         email: req.query.email,
         password: req.query.password,
         company: req.query.company,
-        gender: req.query.gender,
     });
     newExamier.save((err, user) => {
         if (err) {
