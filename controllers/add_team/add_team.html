@@ -71,7 +71,7 @@
     var topic = document.getElementById("topic").value;
     var department = document.getElementById("department").value;
 
-    var url = new URL("http://localhost:3000/addTeam");
+    var url = new URL("https://bactrackserver.onrender.com/addTeam");
     url.searchParams.append('name', teamName);
     url.searchParams.append('memberCount', memberCount);
     url.searchParams.append('topic', topic);
@@ -82,7 +82,7 @@
       .then(function (response) {
           if (response && response.data) {
             console.log(response.data.message);
-            location.replace("http://localhost:3000/home");
+            location.replace("https://bactrackserver.onrender.com/home");
             //Flash - Team added
           }
       })

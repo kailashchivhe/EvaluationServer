@@ -69,7 +69,7 @@
     <script>
       function allExamiers(){
           axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
-          axios.get('http://localhost:3000/allExamier') 
+          axios.get('https://bactrackserver.onrender.com/allExamier') 
           .then(function (response) {
               const list = document.getElementById('examierList'); 
               if (response && response.data) {

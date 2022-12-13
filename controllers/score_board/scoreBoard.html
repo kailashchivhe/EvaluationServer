@@ -66,7 +66,7 @@
     <script>
       function scoreBoard(){
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
-        axios.get('http://localhost:3000/getScore') 
+        axios.get('https://bactrackserver.onrender.com/getScore') 
           .then(function (response) {
               const list = document.getElementById('scoreList'); 
               if (response && response.data) {
