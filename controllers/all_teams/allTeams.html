@@ -70,7 +70,7 @@
 <script>
   function allTeams(){
   axios.defaults.headers.common['Authorization'] = localStorage.getItem('token')
-  axios.get('https://bactrackserver.onrender.com/allTeams') 
+  axios.get('https://evaluationserver.onrender.com/allTeams') 
     .then(function (response) {
         const list = document.getElementById('teamList'); 
         if (response && response.data) {

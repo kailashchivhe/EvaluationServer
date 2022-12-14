@@ -75,7 +75,7 @@
       const password = document.getElementById('password');
 
 
-      var url = new URL("https://bactrackserver.onrender.com/login");
+      var url = new URL("https://evaluationserver.onrender.com/login");
       url.searchParams.append('email', email.value);
       url.searchParams.append('password', password.value);
       axios.post(url.toString(),
@@ -84,7 +84,7 @@
       })
       .then((response) => {
         localStorage.setItem("token",response.data.token);
-        location.replace("https://bactrackserver.onrender.com/home");
+        location.replace("https://evaluationserver.onrender.com/home");
       })
       .catch((err) => {
           console.log(err)
