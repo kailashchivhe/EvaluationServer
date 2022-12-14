@@ -23,7 +23,7 @@ module.exports = function(app) {
     app.get("/getScore", controller.verifyToken, controller.getScores);
     app.get("/logout", controller.verifyToken, controller.logout);
     
-    app.post("/addScore", controller.verifyToken, controller.addScore);
+    app.post("/addScore", controller.addScore);
     app.post("/addTeam", controller.verifyToken, controller.addTeam);
     app.post("/addExamier", controller.verifyToken, controller.addExamier);
     app.post("/login", controller.login);
