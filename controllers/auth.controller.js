@@ -42,6 +42,23 @@ exports.validate = (req, res) => {
     //email from req
     // check email from examiers
     //return success if found examier details
+    // Examier.find({req.body.email}, (err, examier) => {
+    //     if (err) throw err;
+    //     return res.status(200).send({ examier: examier });  
+    // });
+    var email = req.body.email;
+    Examier.find({email:email}, function (err, docs) {
+        if (err) {
+          console.log(err);
+          res.status(404).send({
+            message: "Examier not found.",
+          });
+        } else {
+          res.status(200).send({
+            message: "Success",
+          });
+        }
+      });
 
 };
 
